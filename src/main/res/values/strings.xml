@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Acompanhamento de obras</string>
+
+
+    <string name="login_cod_usu">codusu</string>
+    <string name="login_nome_usu">nomeusu</string>
+
+
+    //Urls
+    <string name="url_master">http://10.0.2.2/visita_obras/query/</string>
+    <string name="url_login">login.php</string>
+    <string name="title_activity_nova_obra">NovaObraActivity</string>
+
+
+
+</resources>
