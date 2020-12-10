@@ -1,11 +1,15 @@
 package com.karam.visitaobra;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -20,6 +24,7 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener,TaskListener {
     String codusu,nomeusu;
@@ -57,6 +62,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+
+
     private void setClickListeners() {
         layout_login_master.setOnClickListener(this);
         button_login.setOnClickListener(this);
@@ -75,12 +82,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void setCodNomeUsu(){
-        codusu = (String)Methods.getSharedPref(this,"string",getString(R.string.login_cod_usu));
-        nomeusu = (String)Methods.getSharedPref(this,"string",getString(R.string.login_nome_usu));
+        codusu = (String)Methods.getSharedPref(this,"string",getString(R.string.sh_login_cod_usu));
+        nomeusu = (String)Methods.getSharedPref(this,"string",getString(R.string.sh_login_nome_usu));
     }
 
     private void callNextActivity() {
-        Intent NovaObraIntent = new Intent(LoginActivity.this,NovaObraActivity.class);
+        Intent NovaObraIntent = new Intent(LoginActivity.this,SelectActivity.class);
         startActivity(NovaObraIntent);
         finish();
     }
@@ -115,8 +122,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(Methods.checkValidJson(response)){
             HashMap<String,String> responseMap = Methods.toHashMap(response);//Convert the json to list of hashmap
             if(!String.valueOf(responseMap.get("CODUSU")).trim().matches("")) {
-                Methods.setSharedPref(this, "string", getString(R.string.login_cod_usu), String.valueOf(responseMap.get("CODUSU")));
-                Methods.setSharedPref(this, "string", getString(R.string.login_nome_usu), String.valueOf(responseMap.get("NOMEUSU")));
+                Methods.setSharedPref(this, "string", getString(R.string.sh_login_cod_usu), String.valueOf(responseMap.get("CODUSU")));
+                Methods.setSharedPref(this, "string", getString(R.string.sh_login_nome_usu), String.valueOf(responseMap.get("NOMEUSU")));
                 callNextActivity();
             }else{
                 Toast.makeText(this, "Aconteceu um erro", Toast.LENGTH_SHORT).show();

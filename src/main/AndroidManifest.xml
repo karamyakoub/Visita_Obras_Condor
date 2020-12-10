@@ -3,9 +3,7 @@
     package="com.karam.visitaobra">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <uses-feature android:name="android.hardware.type.watch" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -20,10 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".NovaObraActivity"
-            android:label="@string/title_activity_nova_obra">
-        </activity>
+        <activity android:name=".SelectActivity" android:label=""></activity>
         <activity
             android:name=".LoginActivity"
             android:label="AOB Login"
@@ -31,10 +26,8 @@
             android:theme="@style/AppThemeNoBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
