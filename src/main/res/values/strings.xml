@@ -2,16 +2,57 @@
     <string name="app_name">Acompanhamento de obras</string>
 
 
+    //Sql tables
+    <string name="sql_uf_table_create">
+        CREATE TABLE  estado (
+          id int(11) NOT NULL,
+          nome varchar(75) DEFAULT NULL,
+          uf varchar(5) DEFAULT NULL,
+          PRIMARY KEY (id)
+        );
+    </string>
+
+    <string name="sql_cidade_table_create">
+        CREATE TABLE cidade (
+        id int(11) NOT NULL,
+        nome varchar(120) DEFAULT NULL,
+        estado int(5) DEFAULT NULL,
+        PRIMARY KEY (id)
+        );
+    </string>
+
+    <string name="sql_uf_table_drop">
+        DROP TABLE IF EXISTS estado;
+    </string>
+
+    <string name="sql_cidade_table_drop">
+        DROP TABLE IF EXISTS cidade;
+    </string>
+
 
     //SH
     <string name="sh_login_cod_usu">codusu</string>
     <string name="sh_login_nome_usu">nomeusu</string>
+    <string name="sh_cnpj">cnpj</string>
+    <string name="sh_id_visita">id_visita</string>
+    <string name="sh_id_obra">id_obra</string>
 
 
     //Urls
     <string name="url_master">http://10.0.2.2/visita_obras/query/</string>
     <string name="url_login">login.php</string>
+    <string name="url_cadstrar_nova_obra">cadstrar_obra.php</string>
+    <string name="url_query_uma_obra">query_obra.php</string>
+
+
+
     <string name="title_activity_nova_obra">NovaObraActivity</string>
 
 
+    //string arrays
+    <string-array name="periodo_spinner_array">
+        <item>MANHÃ</item>
+        <item>TARDE</item>
+        <item>MANHÃ/TARDE</item>
+    </string-array>
 </resources>

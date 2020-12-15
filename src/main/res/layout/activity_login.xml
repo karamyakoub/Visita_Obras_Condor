@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/condor_logo"/>
+        android:src="@drawable/logo_app"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,15 +32,15 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginTop="5dp">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/logo_app"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:errorEnabled="true"
-                android:layout_marginTop="10dp">
+                app:counterEnabled="true"
+                app:counterMaxLength="4"
+                app:counterTextColor="@color/colorPrimary"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/login_codusu_editText"
                     android:layout_width="match_parent"

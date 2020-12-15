@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/obra_gravar_menu" android:title="Gravar"/>
+    <item android:id="@+id/obra_fotos_menu" android:title="Tirar fotos"/>
+    <item android:id="@+id/obra_finalizar_menu" android:title="Finalizar"/>
+</menu>

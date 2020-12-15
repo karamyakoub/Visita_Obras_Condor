@@ -70,7 +70,7 @@ public class Methods {
 
     //Static method that will set the shared prefrences in this app
     public static void setSharedPref(@NonNull Context contex, @NonNull String type, @NonNull String name, @NonNull Object value){
-        SharedPreferences sharedPref = contex.getSharedPreferences("com.example.pendencia", MODE_PRIVATE);
+        SharedPreferences sharedPref = contex.getSharedPreferences("com.karam.visitaobra", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         switch (type)
         {
@@ -96,7 +96,7 @@ public class Methods {
     //Static method that gets the shared prefrences in this app
     public  static Object getSharedPref(@NonNull Context context,@NonNull String type,@NonNull String name){
         SharedPreferences sharedPref = context.getSharedPreferences(
-                "com.example.pendencia", MODE_PRIVATE);
+                "com.karam.visitaobra", MODE_PRIVATE);
         Object val = null;
         switch (type)
         {

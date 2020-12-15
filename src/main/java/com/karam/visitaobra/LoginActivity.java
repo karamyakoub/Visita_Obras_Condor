@@ -35,6 +35,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //Create the database states,cities
+        Estados_Cidades estados_cidades = new Estados_Cidades(this);
         //set the layout controls
         setLayoutConstrols();
         //check googleplay services availability
