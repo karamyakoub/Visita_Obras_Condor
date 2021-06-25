@@ -1,10 +1,31 @@
 package com.karam.visitaobra;
 
 public class Obra {
-    private String cliente,emprendedor,uf,cidade,endereco,bairro,almox,engenheiro,telefone1,telefone2,telefone3,cnpj;
+    private String cliente;
+    private String emprendedor;
+    private String uf;
+    private String cidade;
+    private String endereco;
+    private String bairro;
+    private String almox;
+    private String engenheiro;
+    private String telefone1;
+    private String telefone2;
+    private String telefone3;
+    private String cnpj;
+
+    public String getDtultimavisita() {
+        return dtultimavisita;
+    }
+
+    public void setDtultimavisita(String dtultimavisita) {
+        this.dtultimavisita = dtultimavisita;
+    }
+
+    private String dtultimavisita;
     private double lat,longt;
 
-    public Obra(String cliente, String emprendedor, String uf, String cidade, String endereco, String bairro, String almox, String engenheiro, String telefone1, String telefone2, String telefone3, String cnpj, double lat, double longt) {
+    public Obra(String cliente, String emprendedor, String uf, String cidade, String endereco, String bairro, String almox, String engenheiro, String telefone1, String telefone2, String telefone3, String cnpj, double lat, double longt,String dtultimavisita) {
         this.cliente = cliente;
         this.emprendedor = emprendedor;
         this.uf = uf;
@@ -19,6 +40,7 @@ public class Obra {
         this.cnpj = cnpj;
         this.lat = lat;
         this.longt = longt;
+        this.dtultimavisita = dtultimavisita;
     }
 
     public String getCliente() {
